@@ -1,3 +1,7 @@
+
+
+/* UNUSED */ // -------------------------------------------------------
+
 // Theatre-style crawling lights with a spacing of 3
 void theaterChase(uint32_t color, uint8_t wait) {
   for (int j=0; j<10; j++) {  //do 10 cycles of chasing

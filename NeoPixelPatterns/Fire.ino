@@ -1,3 +1,8 @@
+
+
+/* UNUSED */ // -------------------------------------------------------
+
+
 void Fire(int Cooling, int Sparking, int SpeedDelay) {
   static byte heat[numLeds];
   int cooldown;
