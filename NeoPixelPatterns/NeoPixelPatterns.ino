@@ -1,9 +1,9 @@
 #include <Adafruit_NeoPixel.h>
 
-#define PIN 6
-const int buttonPin = 12; 
+#define PIN 2
+const int buttonPin = 6; 
 
-const int numLeds = 30;
+const int numLeds = 60;
 const int delayTime = 100;
 
 int count;
@@ -27,7 +27,7 @@ int buttonState = 0;         // variable for reading the pushbutton status
 //   NEO_KHZ400  400 KHz (classic 'v1' (not v2) FLORA pixels, WS2811 drivers)
 //   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(30, PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(numLeds, PIN, NEO_GRB + NEO_KHZ800);
     
 
 void setup() {
@@ -46,7 +46,7 @@ void loop() {
   if (buttonState == HIGH && !lastPressed) {
     lastPressed = true;
     buttonCount ++;
-    //Serial.println("Plus Button : " + String(buttonCount));
+    Serial.println("Plus Button : " + String(buttonCount));
   } else if (buttonState == LOW){
     lastPressed = false;
   }
@@ -91,7 +91,7 @@ void loop() {
   } else{
     buttonCount = 0;
   }
-  //Serial.println("button count = " + String(buttonCount));
+  Serial.println("button count = " + String(buttonCount));
 }
 
 uint32_t Wheel(byte WheelPos) {
