@@ -84,6 +84,8 @@ void loop() {
   
 
   
+  Serial.print(volume);
+  Serial.print(" ");
   Serial.println(volume);
 //  for(int i=0; i<10; i++) {
 //    CircuitPlayground.setPixelColor(i, soundColor, soundColor*.5, soundColor*.2);
